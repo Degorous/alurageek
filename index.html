@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>AluraGeek</title>
+</head>
+<body>
+  <header class="header">
+    <img src="./assets/Logo.svg" alt="Logo AluraGeek">
+  </header>
+  <main class="main">
+    <section class="main__section">
+      <h1>Meus Produtos:</h1>
+      <div class="products" data-product>
+        <div class="products__card">
+          <div class="product__image">
+            <img src="https://ironstudios.vtexassets.com/arquivos/ids/331168-800-1067?v=638133863550000000&width=800&height=1067&aspect=true" alt="Imagem do produto">
+          </div>
+          <div class="product__info">
+            <p>Darth Vader</p>
+            <div class="product__price">
+              <p>$ 50</p>
+              <button data-id="${id}">
+                <img src="./assets/icons8-lixo.svg" alt="Deletar">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="products__card">
+          <div class="product__image">
+            <img src="https://ironstudios.vtexassets.com/arquivos/ids/331168-800-1067?v=638133863550000000&width=800&height=1067&aspect=true" alt="Imagem do produto">
+          </div>
+          <div class="product__info">
+            <p>Darth Vader</p>
+            <div class="product__price">
+              <p>$ 50</p>
+              <button data-id="${id}">
+                <img src="./assets/icons8-lixo.svg" alt="Deletar">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="add__section">
+      <h1>Adicionar Produto:</h1>
+      <form class="form" data-form>
+        <input type="text" name="name" placeholder="Nome">
+        <input type="text" name="price" placeholder="Preço">
+        <input type="text" name="image" placeholder="Imagem">
+        <span data-mensage class="mesasgeError"></span>
+        <div class="button__form">
+          <button type="submit" class="button__submit" id="button">Adicionar</button>
+          <button type="reset" class="button__reset" id="button">Deletar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <img src="./assets/Logo.svg" alt="Logo AluraGeek">
+    <p>Desenvolvido por Erick Palombo</p>
+    <p>2024</p>
+  </footer>
+</body>
+</html>
