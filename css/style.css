@@ -39,6 +39,7 @@ body {
 .products {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
   /* overflow-y: auto; */
 }
 
@@ -147,31 +148,25 @@ body {
   width: 100%;
 }
 
-#button {
+.button {
   width: 155px;
   height: 55px;
+  border-radius: 15px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 3px solid var(--blue);
 }
 
 .button__submit {
   background-color: var(--blue);
-  border-radius: 15px;
-  border: 3px solid var(--blue);
   color: var(--white);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 20px;
-  padding: 10px 20px;
-  cursor: pointer;
 }
 
 .button__reset {
   background-color: var(--white);
-  border-radius: 15px;
-  border: 3px solid var(--blue);
   color: var(--blue);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 20px;
-  padding: 10px 20px;
-  cursor: pointer;
 }
 
 .footer {
