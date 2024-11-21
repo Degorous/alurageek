@@ -1,13 +1,13 @@
 const base_url = "http://localhost:35003/produtos";
 
-async function listaProdutos() {
+async function productsList() {
   const response = await fetch(base_url);
   const data = await response.json();
 
   return data;
 }
 
-async function createProduto(imagem, nome, preco) {
+async function createProduct(imagem, nome, preco) {
   const response = await fetch(base_url, {
     method: "POST",
     headers: {
@@ -28,7 +28,20 @@ async function createProduto(imagem, nome, preco) {
   return data;
 }
 
+async function deleteProduct(id) {
+  const response = await fetch(`${base_url}/${id}`, {
+    method: 'DELETE',
+  });
+
+  alert('Produto deletado com sucesso');
+
+  if (!response.ok) {
+    throw new Error('Não foi possível deletar o produto');
+  }
+}
+
 export const API = {
-  listaProdutos,
-  createProduto,
+  productsList,
+  createProduct,
+  deleteProduct
 }

@@ -2,7 +2,7 @@ import { API } from "./API.js";
 
 const form = document.querySelector("[data-form]");
 
-async function criarProduto(event) {
+async function submitProduct(event) {
   event.preventDefault();
 
   const nome = document.querySelector("[data-name]").value;
@@ -10,11 +10,11 @@ async function criarProduto(event) {
   const imagem = document.querySelector("[data-image]").value;
 
 try {
-    await API.createProduto(imagem, nome, preco);
+    await API.createProduct(imagem, nome, preco);
     alert('Produto criado com sucesso');
 } catch (error) {
     alert("Erro ao criar produto: ", error);
 }
 }
 
-form.addEventListener("submit", (event) => criarProduto(event));
+form.addEventListener("submit", (event) => submitProduct(event));

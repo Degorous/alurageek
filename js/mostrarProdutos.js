@@ -2,7 +2,7 @@ import { API } from "./API.js";
 
 const lista = document.querySelector("[data-product]");
 
-export default function constroiCard(imagem, nome, preco, id) {
+export default function createCard(imagem, nome, preco, id) {
   const produto = document.createElement("li");
   produto.className = "products__card";
   produto.innerHTML = `
@@ -22,15 +22,15 @@ export default function constroiCard(imagem, nome, preco, id) {
   return produto;
 }
 
-async function listaProduto() {
+async function showProducts() {
   try {
-    const produtos = await API.listaProdutos();
+    const produtos = await API.productsList();
 
     produtos.forEach(produto =>  lista.appendChild(
-      constroiCard(produto.imagem, produto.nome, produto.preco)));
+      createCard(produto.imagem, produto.nome, produto.preco, produto.id)));
   } catch {
     lista.innerHTML = `<h2 class="mensagem__titulo">Não foi possível carregar os produtos</h2>`
   }
 }
 
-listaProduto();
+showProducts();
